@@ -3,7 +3,7 @@ const nodeExternals = require("webpack-node-externals");
 const clientConfig = {
   mode: "development",
   entry: {
-    client: "./src/client/index.ts",
+    client: "./src/client/index.tsx",
   },
   output: {
     filename: "[name].js",
@@ -12,14 +12,14 @@ const clientConfig = {
   module: {
     rules: [
       {
-        test: /\.ts$/,
+        test: /\.tsx?$/,
         use: "ts-loader",
         exclude: "/node_modules/",
       },
     ],
   },
   resolve: {
-    extensions: [".ts", ".js"],
+    extensions: [".ts", ".tsx", ".js", ".jsx"],
   },
 };
 
