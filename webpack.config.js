@@ -3,7 +3,7 @@ const nodeExternals = require("webpack-node-externals");
 const clientConfig = {
   mode: "development",
   entry: {
-    client: "./src/client/index.tsx",
+    client: "./src/client/app.tsx",
   },
   output: {
     filename: "[name].js",
